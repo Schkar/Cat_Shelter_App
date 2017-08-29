@@ -1,0 +1,144 @@
+//Font
+
+@font-face {
+    font-family: CatFont;
+    src: url("../fonts/Kitty face.ttf");
+}
+
+
+// Colors
+$rainbow: (
+red: #FF0000,
+yellow: #FFFF00,
+green: #00FF00,
+blue: #0000FF,
+turquoise:#40e0d0
+);
+
+@each $name, $color in $rainbow {
+  	.#{$name}{
+   		border: 2px solid $color;
+  	}
+}
+
+// Styling
+body{
+	font-family: CatFont;
+	font-size: 1em;
+	background-image: url("../images/99cats.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	.shelter_wrapper{
+		border: 2px solid blue;
+		background-color: white;
+		width: 90%;
+		@media (min-width: "640px"){
+			width: 60%;
+		}
+		margin: 60px auto 0 auto;
+		.shelter_header{
+			padding: 40px;
+			font-size: 2em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.shelter_header_mobile{
+			display: block;
+			@media(min-width: "640px"){
+				display: none;
+			}
+			padding: 10px;
+			font-size: 0.5em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.search_form{
+			padding: 20px;
+			background-color: rgba(yellow, 0.6);
+			font-size: 1.5em;
+			.search_box{
+				width: 100%;
+				font-size: 1em;
+			}
+			.checkbox_label{
+				display: block;
+			}
+			.font_checker_label{
+				.font_checker{
+					width: 200px;
+					.cat_option{
+						font-family: CatFont
+					}
+					.normal_option{
+						font-family: sans-serif
+					}
+				}
+			}
+		}
+		.cat_table{
+			width: 80%;
+			margin: 5px auto;
+			@media (min-width: "640px"){
+				margin: 20px auto;
+				width: 50%;
+			}
+			border-collapse: collapse;
+			border: 2px solid aquamarine;
+			.cat_table_head{
+				font-size: 1.5em;
+				.cat_table_head_row{
+					.cat_table_head_name{
+						padding: 10px;
+					}
+					.cat_table_head_age{
+						padding: 10px;
+						text-align: center;
+					}
+				}
+			}
+			.cat_table_body{
+				.cat_separator_row{
+					border: 1px solid green;
+					.cat_separator{
+						padding: 10px;
+						font-size: 1.5em;
+					}
+				}
+				.single_cat_row{
+					text-align: center;
+					&:hover{
+						background-color: lightgray;
+					}
+					.cat_dontlikekids{
+						color: red;
+					}
+					.single_cat_name{
+						padding: 10px;
+						border: 1px solid royalblue;
+					}
+					.single_cat_age{
+						padding: 10px;
+						border: 1px solid royalblue;
+					}
+				}
+			}
+
+		}
+	}
+}
+	//background-image: url("../images/99cats.jpg");
+	// &::before{
+	// 	content: "";
+	// 	height: 100px;
+	// 	width: 100px;
+	// 	background-image: url("../images/99cats.jpg");
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
+	// 	opacity: 0.6;
+	// }
+
+
+
+
+
